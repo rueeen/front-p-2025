@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 hidden>Su edad es: </h2>
+    <h2 id="saludo" hidden>Hola desde boton</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad">
+
+        <button type="submit">Aumentar edad</button>
+        <a id="saludar" href="#">Saludar</a>
+        <a id="ocultar" href="#">Ocultar</a>
+    </form>
+
+    <script>
+        let botonSaludar = document.querySelector("#saludar");
+        let saludo = document.querySelector('#saludo');
+        let inptNombre = document.querySelector('#nombre');
+
+        botonSaludar.addEventListener('click', function(){
+            console.log('Hice click');
+            // .value obtiene el valor de un input
+            let nombre = inptNombre.value;
+            // Modificando el saludo de h2
+            // saludo.textContent = "Hola "+nombre+" desde boton"; // Con concatenacion
+            saludo.textContent = `Hola ${nombre} desde boton`; // Con template string
+
+            saludo.hidden = false;
+        });
+
+        let ocultar = document.querySelector('#ocultar');
+
+        ocultar.addEventListener('click', function(){
+            saludo.hidden = true;
+        });
+
+    </script>
+</body>
+</html>

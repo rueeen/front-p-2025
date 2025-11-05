@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Capturando elementos con JS</h1>
+
+    <div>
+        <p>Hola mundo</p>
+        <p id="p1" class="p2">Hola mundo con id</p>
+        <section>
+            <p id="p1" class="p2">Hola mundo con class</p>
+        </section>
+    </div>
+
+    <script>
+        // Etiqueta para trabajar JS
+
+        // Capturando con querySelector 
+        let p1 = document.querySelector('#p1'); // Si quieres capturar por id #
+        let p2 = document.querySelector('.p2'); // Si quieres capturar por id #
+        let p3 = document.querySelector('p')
+        console.log(p1);
+        console.log(p2);
+        console.log(p3);
+        let p4 = document.querySelector('div section p')
+        console.log(p4);
+
+        let lista = document.querySelectorAll('#p1');
+        console.log(lista); // Devuelve un nodeList con elementos que cumplen la seleccion
+    </script>
+</body>
+
+</html>

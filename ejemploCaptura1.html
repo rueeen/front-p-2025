@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Capturando elementos con JS</h1>
+
+    <p>Hola mundo</p>
+    <p id="p1" class="p2">Hola mundo con id</p>
+    <p id="p1" class="p2">Hola mundo con class</p>
+
+    <script>
+        // Etiqueta para trabajar JS
+
+        // Capturando con getElementById
+        let p1 = document.getElementById("p1");
+        console.log(p1);
+
+        let p2 = document.getElementById("p2");
+        console.log(p2); // Devuelve null porque no hay elementos con id p2
+
+        let c1 = document.getElementsByClassName("p2");
+        console.log(c1) // Devuelve un htmlCollection (array) con todas las clases encontradas
+    </script>
+</body>
+
+</html>
